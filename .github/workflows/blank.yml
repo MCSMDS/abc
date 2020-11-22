@@ -18,7 +18,7 @@ jobs:
           java-package: jre # (jre, jdk, or jdk+fx) - defaults to jdk
           architecture: x86 # (x64 or x86) - defaults to x64
 
-      - run: echo "Hello ${{ GITHUB_EVENT_NAME }}!"
+      - run: echo "Hello ${{ github.event_name }}!"
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
