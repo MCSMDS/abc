@@ -7,9 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image:  google/dart:latest
     steps:
       - uses: actions/checkout@v2
+      - name: Docker
+        run: docker pull google/dart:latest
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
