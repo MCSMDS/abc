@@ -1,19 +1,9 @@
 name: CI
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Docker
-        run: docker pull google/dart:latest
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
-
-
-
+    - uses: actions/checkout@v2
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
